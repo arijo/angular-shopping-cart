@@ -1,0 +1,39 @@
+<div class="summary panel panel-default">
+  <div class="panel-heading">Order Summary</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <th>Image</th><th>Title</th><th>Price</th>
+      </thead>
+      <tbody ng-repeat="item in summary.items">
+        <tr>
+          <td><img ng-src="{{item.src}}" width=64 height=64/></td>
+          <td>{{item.title}}</td>
+          <td>{{item.price.currency}}{{item.price.amount}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-striped">
+      <thead>
+        <th>Sub Totals</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cart</td>
+          <td>£{{summary.subTotal.cart}}</td>
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td>£{{summary.subTotal.shipping}}</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td>£{{summary.total}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-warning bt-lg btn-block" ng-click="placeOrder()">
+      Place Order
+    </button>
+  </div>
+</div>

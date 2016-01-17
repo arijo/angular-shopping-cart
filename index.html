@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ecommerce</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+
+    <div class="app container" ng-app="app">
+      <div class="row">
+        <div class="page cold-md-12" ui-view></div>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="app/config.js"></script>
+    <script src="app/home.js"></script>
+    <script src="app/home/controllers/catalog.js"></script>
+    <script src="app/home/controllers/cart.js"></script>
+    <script src="app/home/controllers/shipping.js"></script>
+    <script src="app/home/controllers/summary.js"></script>
+    <script src="app/thanks.js"></script>
+    <script src="app.js"></script>
+    <script src="app/lib/services/catalog.js"></script>
+    <script src="app/lib/services/cart.js"></script>
+    <script src="app/lib/services/shipping.js"></script>
+    <script src="app/lib/services/summary.js"></script>
+    <script src="app/lib/services/event.js"></script>
+</body>
+</html>

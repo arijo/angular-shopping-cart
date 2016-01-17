@@ -1,0 +1,19 @@
+.container {
+  margin: 20px auto;
+}
+
+.product .product-title, 
+.product .product-price {
+  color: #000;
+  text-align: center;
+}
+
+.item .item-title,
+.item .item-price {
+  color: #000;
+  float: left;
+}
+
+.product .add {
+  margin: 10px 0;
+}

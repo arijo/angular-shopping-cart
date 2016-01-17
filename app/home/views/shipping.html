@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Choose a Delivery Option</div>
+  <div class="panel-body">
+    <div class="shipping">
+      <form novalidate>
+        <div class="radio">
+          <label>
+            <input type="radio" ng-model="shipping.option" value="home" />Home Delivery
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" ng-model="shipping.option" value="collect" />Click & Collect
+          </label>
+        </div>
+        <button type="submit" class="btn btn-warning bt-lg btn-block" ng-click="checkout(shipping)" ng-show="shipping.option">
+          Update/Show Order Summary
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

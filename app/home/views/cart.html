@@ -1,0 +1,25 @@
+<div class="cart panel panel-default">
+  <div class="panel-heading">Shopping Cart</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <th>Image</th><th>Title</th><th>Price</th><th>Remove</th>
+      </thead>
+      <tbody ng-repeat="item in cart">
+        <tr>
+          <td><img ng-src="{{item.src}}" width=64 height=64/></td>
+          <td>{{item.title}}</td>
+          <td>{{item.price.currency}}{{item.price.amount}}</td>
+          <td>
+            <button type="button" class="btn btn-xs" ng-click="remove(item)">
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-warning bt-lg btn-block" ng-click="checkout()" ng-show="cart.length">
+      Checkout
+    </button>
+  </div>
+</div>

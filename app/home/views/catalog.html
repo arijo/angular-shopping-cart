@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Catalog</div>
+  <div class="panel-body">
+    <div class="catalog">
+      <div class="product-list" ng-repeat="row in catalog">
+        <div class="row">
+          <div class="col" ng-repeat="product in row">
+            <div class="col-md-4">
+              <div class="product">
+                <a href="javascript:void(0);">
+                  <img ng-src="{{product.src}}"/>
+                  <div class="product-title">{{product.title}}</div>
+                  <div class="product-price">{{product.price.currency}}{{product.price.amount}}</div>
+                  <div class="btn-group btn-group-justified" role="group">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="add btn btn-default" ng-click="cart.add(product)">Add to Cart</button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
